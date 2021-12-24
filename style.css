@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+}
+header {
+  display: flex;  /* place les éléments côte à côte */
+  justify-content: space-between; /*donne un espace identique entre tous les éléments du conteneur*/
+  background-color: #89B5AF;
+  grid-column: span 5;
+  align-items: center; /*aligner le contenu sur l'axe vertical*/
+}
+
+.logo {
+/* flex-grow: 1; */
+  font-size: 6vw;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  width: 13%;
+  padding: 0 0 0 1vw;
+}
+
+.search {
+/* flex-grow: 3; */
+}
+
+.cart {
+/* flex-grow: 1; */
+  width: 10vw;
+  height: 10vh; /*vérifier les unités de mesures*/
+  display: flex;
+  justify-content: end;
+}
+
+.cart svg {
+  /* flex: 1 1 auto; */
+  padding: 1.7vh 1.7vw;
+  fill: #DED9C4;
+}
+
+nav {
+  background-color:#96C7C1;
+  grid-column: 1 / 2;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2vw;
+}
+
+section {
+  background-color: white;
+  grid-column: 2 / span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: 1fr 2fr 1fr;
+  font-family: 'PT Sans', sans-serif;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; tentative en display flex. Je préfère le display grid, avec changement du nombre de colonnes pour smartphones
+  align-content: space-around;
+  padding: 1vh 1vw;*/
+}
+
+h1 {
+  grid-column: 1 / span 3;
+  grid-row: 1/1;
+
+  padding-left: 1vw;
+  padding-top: 1vh;
+  /*soulignage partiel sur 2/3 de la longueur de la box ? */
+}
+
+.apercu {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / span 3;
+  grid-row: 2/2;
+  justify-self: center;
+}
+
+.apercu img {
+  max-width: 60vw;
+}
+
+.description {
+  grid-column: 1 / span 3;
+  grid-row: 3/3;
+  padding-left: 1vw;
+}
+
+
+
+#prix::after {
+  content: "TTC"; /*mettre en petit et en exposant */
+}
+
+
+
+aside {
+  grid-column: 4/4;
+  grid-row: 2/2;
+  border-left: solid 3px #96C7C1;
+  padding-left: 1vw;
+  font-size: 2vw;
+}
+
+#panier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+
+
+}
+#panier svg {
+  width: 20%;
+  fill: #96C7C1;
+}
+
+article {
+  justify-self: center; /*aligner les articles dans chaque colonne de la section */
+  border-style: solid;
+  border-width: 3px;
+  border-color: #96C7C1;
+  margin: 1vw 0;
+  display: flex; /*fait en sorte que la taille de l'article s'adapte à l'image*/
+  flex-direction: column;
+  text-align: center;
+  max-width: 15vw;
+  font-family: 'PT Sans', sans-serif;
+  /* min-width: 15vw; */
+  /* width: 15vw; */
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer {
+  background-color: grey;
+  grid-column: span 5;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-family: 'PT Sans', sans-serif;
+  color: white;
+}
+
+footer div {
+  width: 33vw;
+}
+
+footer div svg {
+  height: 10vh;
+  width: 10vw;
+  fill: #DED9C4;
+}
+
+
+/* small screen layout : l'ordre compte*/
+@media screen and (max-width: 600px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+  article {
+    min-width: 50vw;
+  }
+}
+
+.mainmenu {
+  list-style: none;
+}
+
+nav {
+  padding-left: 2vw;
+  padding-top: 2vw;
+}
+
+.sousmenu {
+  display: none;
+  font-size: 1.4vw;
+  list-style: none;
+  padding-left: -2vw;
+}
+
+.sousmenu li {
+  background-color: #abd2cd;
+}
+
+.mainmenu:hover .sousmenu {
+  display: inline;
+}
+
+.search input{
+  background-color: #DED9C4;
+  height: 5vh;
+  width: 40vw;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 1em; /*à modifier plus tard pour rendre responsive*/
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+
+
+.search {
+  /* display: flex;
+  align-items: center; */
+}
+
+
+/* palette couleur : https://colorhunt.co/palette/89b5af96c7c1ded9c4d0cab2 */
+
+/* chercher comment modifier l'aspect de la barre de recherche quand elle est focus */
+
+.infoarticle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.infoarticle p:nth-child(1)  {
+  grid-column: span 2;
+}
+
+.infoarticle p:nth-child(2)  {
+  grid-row: 2/2;
+  font-size: 1.7vw;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+.infoarticle p:nth-child(3)  {
+  grid-row: 2/2;
+  font-weight: bolder;
+  text-align: end;
+  padding-right: 3px;
+}
+
+
