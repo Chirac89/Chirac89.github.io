@@ -102,8 +102,8 @@ nav {
   padding: 1vw 1vw  0 2vw;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 5fr;
-  max-height: 20vw;
+  /* grid-template-rows: 1fr 5fr; */
+  /* max-height: 20vw; */
 }
 
 .info-promo {
@@ -149,7 +149,8 @@ h1 {
 }
 
 .apercu img {
-  max-width: 60vw;
+  max-width: 40vw;
+  padding: 5vw;
 }
 
 .description {
@@ -238,11 +239,38 @@ footer div svg {
 
 /* small screen layout : l'ordre compte*/
 @media screen and (max-width: 600px) {
-  section {
+  .index {
     grid-template-columns: 1fr;
   }
+
+  .promo p:last-child {
+    grid-column: 1/1;
+  }
+
+  .promo {
+    grid-row: 1/1;
+    grid-template-rows: 1fr;
+  }
+
+  .promo-wrapper p, .promo-wrapper img{
+    grid-column: 1/1;
+  }
+  .promo {
+    grid-column: 1/1;
+    grid-template-columns: 1fr;
+    margin: 5vw;
+  }
+
+  .promo-wrapper{
+    grid-column: 1/1;
+  }
+  .info-promo{
+    grid-column: 1/1;
+  }
+
   article {
     min-width: 50vw;
+    grid-column: 1/1;
   }
 }
 
