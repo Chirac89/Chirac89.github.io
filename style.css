@@ -6,6 +6,7 @@ body {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
 }
+
 header {
   display: flex;  /* place les éléments côte à côte */
   justify-content: space-between; /*donne un espace identique entre tous les éléments du conteneur*/
@@ -128,7 +129,7 @@ nav {
   grid-column: 2/ 3;
   font-weight: bolder;
   font-style: italic;
-  font-size: 1.4vw;
+  font-size: 0.8rem;
 }
 
 h1 {
@@ -239,39 +240,40 @@ footer div svg {
 
 /* small screen layout : l'ordre compte*/
 @media screen and (max-width: 600px) {
-  .index {
-    grid-template-columns: 1fr;
-  }
+    .index {
+      grid-template-columns: 1fr;
+    }
 
-  .promo p:last-child {
-    grid-column: 1/1;
-  }
+    .promo p:last-child {
+      grid-column: 1/1;
+    }
 
-  .promo {
-    grid-row: 1/1;
-    grid-template-rows: 1fr;
-  }
+    .promo {
+      grid-row: 1/1;
+      grid-template-rows: 1fr;
+    }
 
-  .promo-wrapper p, .promo-wrapper img{
-    grid-column: 1/1;
-  }
-  .promo {
-    grid-column: 1/1;
-    grid-template-columns: 1fr;
-    margin: 5vw;
-  }
+    .promo-wrapper p, .promo-wrapper img{
+      grid-column: 1/1;
+    }
+    .promo {
+      grid-column: 1/1;
+      grid-template-columns: 1fr;
+      margin: 5vw;
+    }
 
-  .promo-wrapper{
-    grid-column: 1/1;
-  }
-  .info-promo{
-    grid-column: 1/1;
-  }
+    .promo-wrapper{
+      grid-column: 1/1;
+      justify-self: center;
+    }
+    .info-promo{
+      grid-column: 1/1;
+    }
 
-  article {
-    min-width: 50vw;
-    grid-column: 1/1;
-  }
+    article {
+      min-width: 50vw;
+      grid-column: 1/1;
+    }
 }
 
 .mainmenu {
@@ -332,7 +334,7 @@ nav {
 
 .infoarticle p:nth-child(2)  {
   grid-row: 2/2;
-  font-size: 1.7vw;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   font-style: italic;
@@ -343,3 +345,4 @@ nav {
   text-align: end;
   padding-right: 3px;
 }
+
