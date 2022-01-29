@@ -13,11 +13,13 @@ header {
   background-color: #89B5AF;
   grid-column: span 5;
   align-items: center; /*aligner le contenu sur l'axe vertical*/
+  height: 10vh;
 }
 
 .logo {
 /* flex-grow: 1; */
-  font-size: 6vw;
+  font-size: 4rem;
+  min-width: 412px; 
   color: white;
   font-family: 'PT Sans', sans-serif;
   display: flex;
@@ -25,13 +27,15 @@ header {
 }
 
 .logo svg {
-  width: 13%;
+  width: 70px;
   padding: 0 0 0 1vw;
   fill: rgb(83, 83, 83);
 }
 
 .search {
-/* flex-grow: 3; */
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .cart {
@@ -52,7 +56,7 @@ nav {
   background-color:#96C7C1;
   grid-column: 1 / 2;
   font-family: 'PT Sans', sans-serif;
-  font-size: 2vw;
+  font-size: 1.5rem;
 }
 
 .index {
@@ -281,8 +285,8 @@ footer div svg {
 }
 
 nav {
-  padding-left: 2vw;
-  padding-top: 2vw;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .sousmenu {
@@ -303,7 +307,7 @@ nav {
 .search input{
   background-color: #DED9C4;
   height: 5vh;
-  width: 40vw;
+  width: 90%;
   border-radius: 20px;
   border: 0px;
   font-size: 1em; /*à modifier plus tard pour rendre responsive*/
