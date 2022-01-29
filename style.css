@@ -40,8 +40,8 @@ header {
 
 .cart {
 /* flex-grow: 1; */
-  width: 10vw;
-  height: 10vh; /*vérifier les unités de mesures*/
+  width: 85px;
+  height: 88px; /*vérifier les unités de mesures*/
   display: flex;
   justify-content: end;
 }
@@ -85,6 +85,17 @@ nav {
 
 }
 
+.pages {
+  display: flex;
+  justify-content: space-evenly;
+  grid-column: 2 / span 4;
+  color: #89B5AF;
+  font-weight: 900;
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
 .taille p{
   display: flex;
   border-style: solid;
@@ -94,7 +105,7 @@ nav {
   height: 9vw;
   width: 5vw;
   color: #96C7C1;
-    align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -104,16 +115,20 @@ nav {
   border-color: #96C7C1;
   margin: 1vw 1.7vw;
   grid-column: 1 / 5;
-  padding: 1vw 1vw  1vw 2vw;
+  padding: 1vw 1vw  1vw 0vw;
   display: grid;
   grid-template-columns: 1fr 3fr;
   /* grid-template-rows: 1fr 5fr; */
-  /* max-height: 20vw; */
+}
+
+.promo-wrapper img{
+  max-width: 100%;
 }
 
 .info-promo {
   display: flex;
   flex-direction: column;
+  padding-left: 15px; /*pour media screen smarthpone*/
 }
 
 .info-promo div {
@@ -122,7 +137,6 @@ nav {
 .promo img {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  height: 12vw;
 }
 
 .promo p:first-child {
@@ -287,13 +301,14 @@ footer div svg {
 nav {
   padding-left: 15px;
   padding-top: 15px;
+  grid-row: 2/4;
 }
 
 .sousmenu {
   display: none;
-  font-size: 1.4vw;
+  font-size: 1.1rem;
   list-style: none;
-  padding-left: -2vw;
+  /* padding-left: -2vw; */
 }
 
 .sousmenu li {
@@ -330,10 +345,16 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  align-items: center;
 }
 
 .infoarticle p:nth-child(1)  {
   grid-column: span 2;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .infoarticle p:nth-child(2)  {
