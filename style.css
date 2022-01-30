@@ -25,6 +25,7 @@ header {
   font-family: 'PT Sans', sans-serif;
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .logo svg {
@@ -376,21 +377,35 @@ nav {
   display: inline;
 }
 
-.search input{
+.search input, .search{
   background-color: #DED9C4;
-  height: 5vh;
-  width: 90%;
+  height: 45px;
   border-radius: 20px;
   border: 0px;
-  font-size: 1em; /*à modifier plus tard pour rendre responsive*/
+  font-size: 1rem; /*à modifier plus tard pour rendre responsive*/
   font-family: 'PT Sans', sans-serif;
   text-align: center;
+  justify-content: space-between;
+  /* margin-left: 30px;
+  margin-right: 30px; */
 }
 
 
-.search {
+.search input{
+  width: 90%;
   /* display: flex;
   align-items: center; */
+}
+.search a svg{
+  fill: #8f8b7c;
+  align-items: center;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+
+.search a{
+  width: 25px;
+  align-self: center;
 }
 
 
