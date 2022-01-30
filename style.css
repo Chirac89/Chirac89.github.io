@@ -450,3 +450,8 @@ nav {
   /* font-size: 1.5rem; */
   transform: scale(1.2);
 }
+
+ul li a{
+  text-decoration: none;
+  color: unset;
+}
