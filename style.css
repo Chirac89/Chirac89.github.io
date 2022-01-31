@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+
+>>>>>>> Stashed changes
 body {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
@@ -266,6 +273,16 @@ aside {
   fill: #96C7C1;
 }
 
+<<<<<<< Updated upstream
+=======
+.panier > div:last-child{
+  grid-column: 1 / span 6;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+>>>>>>> Stashed changes
 article {
   justify-self: center; /*aligner les articles dans chaque colonne de la section */
   border-style: solid;
@@ -557,4 +574,119 @@ ul li a{
 form{
   display: flex;
   flex-direction: column;
+<<<<<<< Updated upstream
+=======
+}
+
+.quisommesnous{
+  grid-column: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  text-align: justify;
+}
+
+.quisommesnous p{
+  padding: 10px 0;
+}
+
+/* small screen layout : mettre à la fin car l'ordre compte*/
+@media screen and (max-width: 600px) {
+
+  .logo{
+    font-size: 10vw;
+    margin-right: 0;
+    min-width: 264px;
+    grid-row: 1/1;
+    grid-column: 1/ span 2;
+  }
+
+  .cart{
+    grid-row: 1/1;
+    grid-column: 3/3;
+  }
+
+  header{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color:#89B5AF;
+    height: unset;
+  }
+  .search{
+    grid-row: 2/2;
+    grid-column: 1 / span 3;
+    margin: 0 3vw;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: 180px auto auto auto;
+  }
+
+  nav{
+    grid-row: 2/2;
+    grid-column: 1 / span 5;
+    /* background: linear-gradient(180deg, #96C7C1 26%, white 0%); */
+  }
+
+  nav > ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainmenu:hover .sousmenu {
+    background-color: tomato;
+  }
+
+  .index {
+    grid-template-columns: 1fr;
+    grid-row: 3/3;
+    grid-column: 1 / span 5;
+    background-color: transparent;
+  }
+
+  .promo p:last-child {
+    grid-column: 1/1;
+  }
+
+  .promo {
+    grid-row: 1/1;
+    grid-template-rows: 1fr;
+  }
+
+  .promo-wrapper p, .promo-wrapper img{
+    grid-column: 1/1;
+  }
+  .promo {
+    grid-column: 1/1;
+    grid-template-columns: 1fr;
+    margin: 5vw;
+  }
+
+  .promo-wrapper{
+    grid-column: 1/1;
+    justify-self: center;
+  }
+  .info-promo{
+    grid-column: 1/1;
+  }
+
+  article {
+    min-width: 50vw;
+    grid-column: 1/1;
+  }
+
+  .pages{
+    grid-column: 1 / span 5;
+    align-items: center;
+  }
+
+  .panier, .contact{
+    grid-column: 1 / span 5;
+  }
+
+  .footer{
+    /* grid-row: 4/ span 2; */
+  }
+>>>>>>> Stashed changes
 }
