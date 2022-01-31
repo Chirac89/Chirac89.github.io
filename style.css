@@ -463,17 +463,17 @@ ul li a{
 
 .article-panier{
   display: grid;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
   grid-template-columns: 1fr 5fr;
   padding: 15px;
   text-align: center;
 }
 
 .article-panier img{
-  width: 150px;
+  width: 125px;
   grid-column: 1/1;
 }
-.article-panier div{
+.info-panier{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -484,23 +484,67 @@ ul li a{
   grid-row: 1/1;
 }
 
-.article-panier p:nth-child(2) {
+.info-panier p:nth-child(2) {
   grid-column: 2/2;
   grid-row: 1/1;
 }
 
-.article-panier p:nth-child(3) {
+.info-panier p:nth-child(3) {
   grid-column: 3/3;
   grid-row: 1/1;
 }
 
-.article-panier p:nth-child(4) {
+.info-panier p:nth-child(4) {
   grid-column: 4/4;
   grid-row: 1/1;
 }
+
+.modif-panier{
+  grid-column: 6/6;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
 
 .panier{
   display: grid;
   grid-column: 2 / span 4;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  padding: 50px 50px;
+  justify-content: center;
+}
+
+.contact p input{
+  margin: 30px 0;
+}
+
+.contact input:nth-child(1){
+  background-color: aqua;
+}
+.contact input:nth-child(2){
+  background-color: aqua;
+}
+.contact input:nth-child(3){
+  background-color: aqua;
+}
+.contact input:nth-child(4){
+  background-color: aqua;
+}
+
+.contact p{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#message {
+  resize: none;
 }
