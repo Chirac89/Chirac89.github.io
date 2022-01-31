@@ -404,6 +404,15 @@
   color:#fff;
   transform:scale(1.2);
   }
+
+  .technique {
+    margin: 15px;
+    grid-column:2 / span 4;
+  }
+
+  .technique ol{
+    margin: 30px;
+  }
   
   a {
   color:unset;
@@ -568,11 +577,6 @@
   margin: 15px;
   }
 
-  .technique {
-    grid-column:1 / span 5;
-    margin: 15px;
-    }
-  
   .promo {
   grid-column:1/1;
   grid-row:1/1;
