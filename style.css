@@ -2,13 +2,20 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< Updated upstream
-=======
 
+a{
+  text-decoration: unset;
+  color: unset;
+}
 
+.quisommesnous{
+  grid-column: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  text-align: justify;
+}
 
-
->>>>>>> Stashed changes
 body {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
@@ -273,16 +280,6 @@ aside {
   fill: #96C7C1;
 }
 
-<<<<<<< Updated upstream
-=======
-.panier > div:last-child{
-  grid-column: 1 / span 6;
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
->>>>>>> Stashed changes
 article {
   justify-self: center; /*aligner les articles dans chaque colonne de la section */
   border-style: solid;
@@ -539,20 +536,11 @@ ul li a{
   justify-content: center;
 }
 
-.contact p input{
-}
-
-.contact input:nth-child(1){
-
-}
-.contact input:nth-child(2){
-
-}
-.contact input:nth-child(3){
-
-}
-.contact input:nth-child(4){
-
+.panier > div:last-child{
+  grid-column: 1 / span 6;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
 .contact p{
@@ -574,8 +562,6 @@ ul li a{
 form{
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-=======
 }
 
 .quisommesnous{
@@ -681,12 +667,12 @@ form{
     align-items: center;
   }
 
-  .panier, .contact{
+  .panier, .contact,  .quisommesnous, .article{
     grid-column: 1 / span 5;
   }
 
   .footer{
     /* grid-row: 4/ span 2; */
   }
->>>>>>> Stashed changes
+
 }
