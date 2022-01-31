@@ -192,6 +192,7 @@ nav {
 h1 { /*attention, le logo est en h1 --> lui mettre un id ? */
   grid-column: 1 / span 4;
   grid-row: 1/1;
+  margin: 10px 0;
 
   padding-left: 1vw;
   padding-top: 1vh;
@@ -341,43 +342,7 @@ footer div svg {
 }
 
 
-/* small screen layout : l'ordre compte*/
-@media screen and (max-width: 600px) {
-    .index {
-      grid-template-columns: 1fr;
-    }
 
-    .promo p:last-child {
-      grid-column: 1/1;
-    }
-
-    .promo {
-      grid-row: 1/1;
-      grid-template-rows: 1fr;
-    }
-
-    .promo-wrapper p, .promo-wrapper img{
-      grid-column: 1/1;
-    }
-    .promo {
-      grid-column: 1/1;
-      grid-template-columns: 1fr;
-      margin: 5vw;
-    }
-
-    .promo-wrapper{
-      grid-column: 1/1;
-      justify-self: center;
-    }
-    .info-promo{
-      grid-column: 1/1;
-    }
-
-    article {
-      min-width: 50vw;
-      grid-column: 1/1;
-    }
-}
 
 .mainmenu {
   list-style: none;
@@ -645,15 +610,13 @@ form{
   .promo {
     grid-row: 1/1;
     grid-template-rows: 1fr;
+    grid-column: 1/1;
+    grid-template-columns: 1fr;
+    margin: 50px 20px;
   }
 
   .promo-wrapper p, .promo-wrapper img{
     grid-column: 1/1;
-  }
-  .promo {
-    grid-column: 1/1;
-    grid-template-columns: 1fr;
-    margin: 5vw;
   }
 
   .promo-wrapper{
