@@ -142,6 +142,14 @@
   .description div {
   margin-bottom:20px;
   }
+
+  .description div:nth-child(2) p:nth-child(2){
+    font-weight: bolder;
+  }
+
+  .description div:nth-child(2) p:nth-child(3){
+    font-style: italic;
+  }
   
   .index {
   background-color:#fff;
