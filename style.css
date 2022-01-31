@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+input:focus{
+  outline: unset;
+}
+
 a{
   text-decoration: unset;
   color: unset;
@@ -19,6 +23,10 @@ a{
 body {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  font-family: 'PT Sans', sans-serif;
+}
+
+input, button{
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -182,7 +190,7 @@ nav {
 }
 
 h1 { /*attention, le logo est en h1 --> lui mettre un id ? */
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
   grid-row: 1/1;
 
   padding-left: 1vw;
@@ -555,7 +563,6 @@ ul li a{
 }
 
 .contact input[type="submit"]{
-  color: red;
   align-self: center;
 }
 
