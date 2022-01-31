@@ -410,8 +410,13 @@
     grid-column:2 / span 4;
   }
 
-  .technique ol{
+  .technique > ol{
     margin: 30px;
+    list-style-type: upper-alpha;
+  }
+
+  .technique ol li{
+    line-height: 3rem;
   }
   
   a {
@@ -439,7 +444,7 @@
   
   aside {
   border-left:solid 3px #96C7C1;
-  font-size:2vw;
+  font-size:3vw;
   grid-column:2/2;
   grid-row:1/2;
   padding-left:1vw;
