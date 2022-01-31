@@ -2,10 +2,55 @@
   margin: 0;
   padding: 0;
 }
+
+/* small screen layout : l'ordre compte*/
+@media screen and (max-width: 600px) {
+  .index {
+    grid-template-columns: 1fr;
+  }
+
+  .promo p:last-child {
+    grid-column: 1/1;
+  }
+
+  .promo {
+    grid-row: 1/1;
+    grid-template-rows: 1fr;
+  }
+
+  .promo-wrapper p, .promo-wrapper img{
+    grid-column: 1/1;
+  }
+  .promo {
+    grid-column: 1/1;
+    grid-template-columns: 1fr;
+    margin: 5vw;
+  }
+
+  .promo-wrapper{
+    grid-column: 1/1;
+    justify-self: center;
+  }
+  .info-promo{
+    grid-column: 1/1;
+  }
+
+  article {
+    min-width: 50vw;
+    grid-column: 1/1;
+  }
+}
+
+
 body {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
   font-family: 'PT Sans', sans-serif;
+}
+
+a{
+  text-decoration: unset;
+  color: unset;
 }
 
 header {
@@ -266,6 +311,12 @@ aside {
   fill: #96C7C1;
 }
 
+.panier > div:last-child{
+  grid-column: 1 / span 6;
+  display: flex;
+  justify-content: space-around;
+}
+
 article {
   justify-self: center; /*aligner les articles dans chaque colonne de la section */
   border-style: solid;
@@ -319,43 +370,7 @@ footer div svg {
 }
 
 
-/* small screen layout : l'ordre compte*/
-@media screen and (max-width: 600px) {
-    .index {
-      grid-template-columns: 1fr;
-    }
 
-    .promo p:last-child {
-      grid-column: 1/1;
-    }
-
-    .promo {
-      grid-row: 1/1;
-      grid-template-rows: 1fr;
-    }
-
-    .promo-wrapper p, .promo-wrapper img{
-      grid-column: 1/1;
-    }
-    .promo {
-      grid-column: 1/1;
-      grid-template-columns: 1fr;
-      margin: 5vw;
-    }
-
-    .promo-wrapper{
-      grid-column: 1/1;
-      justify-self: center;
-    }
-    .info-promo{
-      grid-column: 1/1;
-    }
-
-    article {
-      min-width: 50vw;
-      grid-column: 1/1;
-    }
-}
 
 .mainmenu {
   list-style: none;
@@ -522,22 +537,6 @@ ul li a{
   justify-content: center;
 }
 
-.contact p input{
-}
-
-.contact input:nth-child(1){
-
-}
-.contact input:nth-child(2){
-
-}
-.contact input:nth-child(3){
-
-}
-.contact input:nth-child(4){
-
-}
-
 .contact p{
   display: flex;
   justify-content: center;
@@ -557,4 +556,16 @@ ul li a{
 form{
   display: flex;
   flex-direction: column;
+}
+
+.quisommesnous{
+  grid-column: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  text-align: justify;
+}
+
+.quisommesnous p{
+  padding: 10px 0;
 }
